@@ -9,10 +9,9 @@ public class main {
                 new Rational(3, 4),
                 new Rational(7, 8));
 
-        //imperativa
         var unMedio = new Rational(1,2);
         var suma = Rational.ZERO;
-        int sumaNum = 0;
+        //imperativa
         for (Rational r : rationals){
             if (r.isLessThan(unMedio)){
                 //System.out.println(r);
@@ -29,8 +28,7 @@ public class main {
         System.out.println("Racional mayor: "+rationals.stream().reduce(Rational::getGreater).get());
         //Sumar todos numeradores y obtener los siguientes datos:
         //número de elementos, la suma de los numeradores, el numerador menor, el mayor y el promedio
-        sumaNum = rationals.stream().mapToInt(r -> r.getNumerator()).sum();
-        System.out.println("Suma de numeradores: "+sumaNum);
+        System.out.println("Suma numeradores: "+rationals.stream().mapToInt(r -> r.getNumerator()).sum());
         //numero de elementos
         System.out.println("Numero de elementos: "+rationals.stream().count());
         //numerador menor
